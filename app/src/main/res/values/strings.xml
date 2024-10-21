@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SpeneTrack</string>
+    <string name="let_s_start">Let\'s Start</string>
+    <string name="spense_smart_is_smart_money">Spense Smart is Smart Money</string>
+    <string name="saving">Saving</string>
+    <string name="sian_nun">Sian Nun</string>
+    <string name="_1_000_000_00">$ 1,000,000.00</string>
+    <string name="current_balance">Current Balance :</string>
+    <string name="_2_000_000_00">$ 2,000,000.00</string>
+    <string name="old_balance">old balance</string>
+</resources>
