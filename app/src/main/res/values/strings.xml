@@ -8,4 +8,23 @@
     <string name="current_balance">Current Balance :</string>
     <string name="_2_000_000_00">$ 2,000,000.00</string>
     <string name="old_balance">old balance</string>
+    <string name="last_month_expense">Last Month Expense</string>
+    <string name="_1000">$ 1000</string>
+    <string name="spend_type">Spend Type</string>
+    <string name="cerrent_expence">Cerrently Expence</string>
+    <string name="_100">$ 100</string>
+    <string name="food">Food</string>
+    <string name="fuel">Fuel</string>
+    <string name="sport">Sport</string>
+    <string name="other_expanse">Other Expanse</string>
+    <string name="other">Other</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="welcome_back_to_spendtrack_application">Welcome back, to SpendTrack Application</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="you_don_t_have_an_account">You Don\'t have an account ?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="create_your_account_to_enjoy_with_our_app">Create your account to enjoy with our app</string>
+    <string name="you_have_account">You have account ?</string>
 </resources>

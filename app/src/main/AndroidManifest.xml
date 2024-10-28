@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SpeneTrack"
         tools:targetApi="31">
         <activity
+            android:name=".Signup_page"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="false" />
+        <activity
             android:name=".ListView"
             android:exported="true" />
         <activity
