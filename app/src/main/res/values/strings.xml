@@ -27,4 +27,14 @@
     <string name="enter_your_email">Enter your email</string>
     <string name="create_your_account_to_enjoy_with_our_app">Create your account to enjoy with our app</string>
     <string name="you_have_account">You have account ?</string>
+    <string name="food_expense">Food Expense</string>
+    <string name="usa">USA</string>
+    <string name="create_your_new_food_expense">Create Your new Food Expense!!</string>
+    <string name="enter_your_expense_for">Enter your expense for</string>
+    <string name="amount">Amount</string>
+    <string name="date">Date</string>
+    <string name="you_have_expense">You have expense</string>
+    <string name="create_your_new_other_expnse">Create your new other expnse</string>
+    <string name="create_your_new_sport_expense">Create your new Sport expense</string>
+    <string name="create_your_new_fuel_expense">Create your new Fuel expense</string>
 </resources>
