@@ -3,6 +3,7 @@ package com.example.spenetrack
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -40,6 +41,12 @@ class ListView : AppCompatActivity() {
         val OtherPage = findViewById<View>(R.id.view7);
         OtherPage.setOnClickListener{
             val intent = Intent(this,OtherSpendPage::class.java);
+            startActivity(intent);
+        }
+
+        val showTransaction = findViewById<ImageView>(R.id.show_transaction);
+        showTransaction.setOnClickListener{
+            val intent = Intent(this,TransactionPage::class.java);
             startActivity(intent);
         }
     }

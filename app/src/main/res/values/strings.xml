@@ -37,4 +37,5 @@
     <string name="create_your_new_other_expnse">Create your new other expnse</string>
     <string name="create_your_new_sport_expense">Create your new Sport expense</string>
     <string name="create_your_new_fuel_expense">Create your new Fuel expense</string>
+    <string name="transaction_detail">Transaction Detail</string>
 </resources>
