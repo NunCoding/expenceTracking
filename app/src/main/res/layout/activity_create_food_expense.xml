@@ -157,22 +157,21 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/price_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_100"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/view8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.668"
+        app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view9"
         app:layout_constraintVertical_bias="0.227"
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/button_create"
         android:layout_width="411dp"
         android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -180,5 +179,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17"
         app:srcCompat="@drawable/create_button" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_create"
+        app:layout_constraintEnd_toStartOf="@+id/price_show"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintTop_toTopOf="@+id/view9"
+        app:layout_constraintVertical_bias="0.563"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
