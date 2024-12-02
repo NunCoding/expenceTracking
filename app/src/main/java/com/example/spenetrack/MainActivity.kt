@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         }
         val button = findViewById<Button>(R.id.btnLetStart);
         button.setOnClickListener{
-            val intent = Intent(this,LoginPage::class.java);
+            val intent = Intent(this,ListView::class.java);
             startActivity(intent);
         }
 

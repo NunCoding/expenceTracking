@@ -38,4 +38,10 @@
     <string name="create_your_new_sport_expense">Create your new Sport expense</string>
     <string name="create_your_new_fuel_expense">Create your new Fuel expense</string>
     <string name="transaction_detail">Transaction Detail</string>
+    <string name="delete">Delete</string>
+    <string name="_1">$1</string>
+    <string name="gym">Gym</string>
+    <string name="create_sport_expense">Create Sport Expense</string>
+    <string name="fuel_expense">Fuel Expense</string>
+    <string name="other_expense">Other Expense</string>
 </resources>
