@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -39,6 +40,13 @@ class FuelSpendPage : AppCompatActivity() {
         val createFuel = findViewById<ImageView>(R.id.add_expense);
         createFuel.setOnClickListener{
             val intent = Intent(this,CreateFuelExpense::class.java);
+            startActivity(intent);
+        }
+
+        // back to list page
+        val backButton = findViewById<ImageView>(R.id.btn_back_home);
+        backButton.setOnClickListener{
+            val intent = Intent(this, ListView::class.java);
             startActivity(intent);
         }
     }

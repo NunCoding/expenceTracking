@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -37,6 +38,13 @@ class SportSpendPage : AppCompatActivity() {
         val createSport = findViewById<ImageView>(R.id.create_sport);
         createSport.setOnClickListener{
             val intent = Intent(this,CreateSportExpense::class.java);
+            startActivity(intent);
+        }
+
+        // back to list page
+        val backButton = findViewById<ImageView>(R.id.btn_back_home);
+        backButton.setOnClickListener{
+            val intent = Intent(this, ListView::class.java);
             startActivity(intent);
         }
     }

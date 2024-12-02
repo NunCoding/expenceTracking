@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -41,6 +42,13 @@ class OtherSpendPage : AppCompatActivity() {
         val createOther = findViewById<ImageView>(R.id.create_other);
         createOther.setOnClickListener{
             val intent = Intent(this,CreateOtherExpense::class.java);
+            startActivity(intent);
+        }
+
+        // back to list page
+        val backButton = findViewById<ImageView>(R.id.btn_back_home);
+        backButton.setOnClickListener{
+            val intent = Intent(this, ListView::class.java);
             startActivity(intent);
         }
     }

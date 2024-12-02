@@ -157,7 +157,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/price_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_100"

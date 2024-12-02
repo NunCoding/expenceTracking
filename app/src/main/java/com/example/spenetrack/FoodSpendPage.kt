@@ -45,5 +45,12 @@ class FoodSpendPage : AppCompatActivity() {
             val intent = Intent(this, CreateFoodExpense::class.java)
             startActivity(intent)
         }
+
+        // back to list page
+        val backButton = findViewById<ImageView>(R.id.btn_back_home);
+        backButton.setOnClickListener{
+            val intent = Intent(this,ListView::class.java);
+            startActivity(intent);
+        }
     }
 }

@@ -6,11 +6,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.addTextChangedListener
 
 class CreateFoodExpense : AppCompatActivity() {
     private val sharedPreferencesKey = "FoodExpenseData"
@@ -30,6 +32,12 @@ class CreateFoodExpense : AppCompatActivity() {
         val amountEd = findViewById<EditText>(R.id.amount)
         val dateTimeEd = findViewById<EditText>(R.id.Date)
         val createButton = findViewById<ImageView>(R.id.button_create)
+        val prices = findViewById<TextView>(R.id.price_show);
+
+        amountEd.addTextChangedListener {
+            val amount = amountEd.text.toString();
+            prices.text = amount;
+        }
 
         createButton.setOnClickListener {
             val spendType = spendTypeEd.text.toString()
