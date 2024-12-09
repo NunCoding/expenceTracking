@@ -66,11 +66,11 @@
 
             <TextView
                 android:id="@+id/food_price"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
-                android:text="@string/_1_000_000_00"
+                android:text="@string/_0_00"
                 android:textColor="#ffff"
                 android:textSize="28sp" />
 
@@ -107,15 +107,18 @@
         app:layout_constraintVertical_bias="0.964"
         app:srcCompat="@drawable/im_add_item" />
 
-    <ImageView
-        android:id="@+id/btn_back_home"
-        android:layout_width="99dp"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/view_transition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_all_transaction"
+        android:textColor="#076400"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/btn_back_home" />
+        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.493" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

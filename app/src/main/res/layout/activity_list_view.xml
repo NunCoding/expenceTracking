@@ -46,17 +46,29 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/saving"
-                android:textColor="#3A3A3A"
+                android:text="@string/top_up_and_expense"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/_1_000_000_00"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:gravity="center">
+               <TextView
+                   android:id="@+id/top_up_amount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/_1_000_000_00"
+                   android:textSize="20sp"
+                   android:textStyle="bold" />
+               <ImageView
+                   android:id="@+id/btn_top_top"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/top_up"
+                   android:paddingStart="40dp"
+                   tools:ignore="RtlSymmetry" />
+           </LinearLayout>
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
@@ -198,11 +210,11 @@
         app:layout_constraintVertical_bias="0.199" />
 
     <TextView
-        android:id="@+id/current_money_expence"
+        android:id="@+id/current_money_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/_100"
+        android:text="@string/_0_00"
         android:textColor="#646464"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -243,7 +255,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/navigate_to_food"
         android:layout_width="451dp"
         android:layout_height="65dp"
         android:layout_marginTop="21dp"
@@ -257,25 +269,25 @@
         android:id="@+id/imageView3"
         android:layout_width="71dp"
         android:layout_height="63dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_food"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_food"
         app:layout_constraintHorizontal_bias="0.092"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/navigate_to_food"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_food"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/food" />
 
     <TextView
-        android:id="@+id/food_price"
-        android:layout_width="wrap_content"
+        android:id="@+id/total_food_amount"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="@string/_100"
+        android:text="@string/_0_00"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_food"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_food"
         app:layout_constraintVertical_bias="0.717"
         tools:ignore="MissingConstraints" />
 
@@ -284,23 +296,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/food"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_food"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_food"
         app:layout_constraintVertical_bias="0.304"
         tools:ignore="MissingConstraints" />
 
     <View
-        android:id="@+id/view5"
+        android:id="@+id/navigate_to_fuel"
         android:layout_width="447dp"
         android:layout_height="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/navigate_to_food"
         app:layout_constraintVertical_bias="0.083" />
 
     <ImageView
@@ -309,11 +321,11 @@
         android:layout_height="63dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view5"
-        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_fuel"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_fuel"
         app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="@+id/view5"
-        app:layout_constraintTop_toTopOf="@+id/view5"
+        app:layout_constraintStart_toStartOf="@+id/navigate_to_fuel"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_fuel"
         app:layout_constraintVertical_bias="0.615"
         app:srcCompat="@drawable/oil" />
 
@@ -324,38 +336,38 @@
         android:layout_marginTop="9dp"
         android:layout_marginBottom="37dp"
         android:text="@string/fuel"
-        app:layout_constraintBottom_toBottomOf="@+id/view5"
-        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_fuel"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_fuel"
         app:layout_constraintHorizontal_bias="0.275"
-        app:layout_constraintStart_toStartOf="@+id/view5"
-        app:layout_constraintTop_toTopOf="@+id/view5"
+        app:layout_constraintStart_toStartOf="@+id/navigate_to_fuel"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_fuel"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtOilPrice"
+        android:id="@+id/total_fuel_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/_100"
+        android:text="@string/_0_00"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view5"
-        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_fuel"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_fuel"
         app:layout_constraintHorizontal_bias="0.279"
-        app:layout_constraintStart_toStartOf="@+id/view5"
-        app:layout_constraintTop_toTopOf="@+id/view5"
+        app:layout_constraintStart_toStartOf="@+id/navigate_to_fuel"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_fuel"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <View
-        android:id="@+id/view6"
+        android:id="@+id/navigate_to_sport"
         android:layout_width="447dp"
         android:layout_height="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="@+id/navigate_to_fuel"
         app:layout_constraintVertical_bias="0.106"
         tools:ignore="MissingConstraints" />
 
@@ -364,11 +376,11 @@
         android:layout_width="71dp"
         android:layout_height="63dp"
         android:layout_marginTop="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view6"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_sport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="@+id/view6"
-        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="@+id/navigate_to_sport"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_sport"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_sport"
         tools:ignore="MissingConstraints" />
@@ -380,27 +392,27 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="36dp"
         android:text="@string/sport"
-        app:layout_constraintBottom_toBottomOf="@+id/view6"
-        app:layout_constraintEnd_toEndOf="@+id/view6"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_sport"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_sport"
         app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toStartOf="@+id/view6"
-        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:layout_constraintStart_toStartOf="@+id/navigate_to_sport"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_sport"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/txtSportPrice"
+        android:id="@+id/total_sport_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginBottom="10dp"
-        android:text="@string/_100"
+        android:text="@string/_0_00"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view6"
-        app:layout_constraintEnd_toEndOf="@+id/view6"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_sport"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_sport"
         app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_sport"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
@@ -418,29 +430,29 @@
         app:layout_constraintVertical_bias="0.137" />
 
     <TextView
-        android:id="@+id/txtOtherPrice"
+        android:id="@+id/total_other_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/_100"
+        android:text="@string/_0_00"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintBottom_toTopOf="@+id/navigate_to_other"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/navigate_to_sport"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <View
-        android:id="@+id/view7"
+        android:id="@+id/navigate_to_other"
         android:layout_width="447dp"
         android:layout_height="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/navigate_to_sport"
         app:layout_constraintVertical_bias="0.705"
         tools:ignore="MissingConstraints" />
 
@@ -449,11 +461,11 @@
         android:layout_width="71dp"
         android:layout_height="63dp"
         android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view7"
-        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_other"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_other"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_other"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/spending"
         tools:ignore="MissingConstraints" />
@@ -466,22 +478,22 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="38dp"
         android:text="@string/other"
-        app:layout_constraintBottom_toBottomOf="@+id/view7"
-        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_other"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_other"
         app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toTopOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_other"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/txtOtherprices"
+        android:id="@+id/total_other_expnse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_100"
+        android:text="@string/_0_00"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view7"
-        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_other"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_other"
         app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
@@ -494,11 +506,11 @@
         android:layout_height="35dp"
         android:layout_marginTop="14dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_food"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_food"
         app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_food"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/arrow_up_more" />
 
@@ -508,11 +520,11 @@
         android:layout_height="37dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view5"
-        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_fuel"
+        app:layout_constraintEnd_toEndOf="@+id/navigate_to_fuel"
         app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_fuel"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/arrow_up_more" />
 
@@ -522,11 +534,11 @@
         android:layout_height="37dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="18dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view6"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_sport"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_sport"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/arrow_up_more"
         tools:ignore="DuplicateIds" />
@@ -537,11 +549,11 @@
         android:layout_height="37dp"
         android:layout_marginTop="13dp"
         android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view7"
+        app:layout_constraintBottom_toBottomOf="@+id/navigate_to_other"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toTopOf="@+id/view7"
+        app:layout_constraintTop_toTopOf="@+id/navigate_to_other"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/arrow_up_more"
         tools:ignore="DuplicateIds" />

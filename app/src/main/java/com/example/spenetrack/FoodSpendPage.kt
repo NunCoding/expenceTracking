@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.ListView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -31,11 +32,18 @@ class FoodSpendPage : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("FoodExpenseData", Context.MODE_PRIVATE)
         val tasks = sharedPreferences.getStringSet("tasks", mutableSetOf())?.toMutableList() ?: mutableListOf()
 
+        val totalCurrentAmount = findViewById<TextView>(R.id.food_price);
+        val totalExpense = tasks.sumOf { task ->
+            val parts = task.split(" - ")
+            parts.getOrNull(1)?.toDoubleOrNull() ?: 0.00
+        }
+
+        val totalExpenseFloat = totalExpense.toFloat()
+        totalCurrentAmount.text = totalExpenseFloat.toString();
 // Pass the list to the adapter
         val adapter = FoodSpendAdapter(this, tasks) { position ->
             tasks.removeAt(position)
         }
-
 
         recyclerView.layoutManager = LinearLayoutManager(this);
         recyclerView.adapter = adapter;
@@ -46,11 +54,10 @@ class FoodSpendPage : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // back to list page
-        val backButton = findViewById<ImageView>(R.id.btn_back_home);
-        backButton.setOnClickListener{
-            val intent = Intent(this,ListView::class.java);
-            startActivity(intent);
+        val viewTransaction = findViewById<TextView>(R.id.view_transition);
+        viewTransaction.setOnClickListener{
+            val intent = Intent(this,TransactionPage::class.java);
+            startActivity(intent)
         }
     }
 }

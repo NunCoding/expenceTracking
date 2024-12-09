@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.ListView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -29,6 +30,14 @@ class FuelSpendPage : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView);
         val sharedPreferences = getSharedPreferences("FuelExpenseData", Context.MODE_PRIVATE)
         val tasks = sharedPreferences.getStringSet("tasks", mutableSetOf())?.toMutableList() ?: mutableListOf()
+
+        val totalCurrentAmount = findViewById<TextView>(R.id.fuel_total_price);
+        val totalFuelAmount = tasks.sumOf { task ->
+            val parts = task.split(" - ")
+            parts.getOrNull(1)?.toDoubleOrNull() ?: 0.00
+        }
+        val totalCurrentFuelExpense = totalFuelAmount.toFloat();
+        totalCurrentAmount.text = totalCurrentFuelExpense.toString();
 //      Pass the list to the adapter
         val adapter = FuelExpenseAdapter(this, tasks) { position ->
             tasks.removeAt(position)
@@ -42,12 +51,10 @@ class FuelSpendPage : AppCompatActivity() {
             val intent = Intent(this,CreateFuelExpense::class.java);
             startActivity(intent);
         }
-
-        // back to list page
-        val backButton = findViewById<ImageView>(R.id.btn_back_home);
-        backButton.setOnClickListener{
-            val intent = Intent(this, ListView::class.java);
-            startActivity(intent);
+        val viewTransaction = findViewById<TextView>(R.id.view_transition);
+        viewTransaction.setOnClickListener{
+            val intent = Intent(this,TransactionPage::class.java);
+            startActivity(intent)
         }
     }
 }

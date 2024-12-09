@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.ListView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,6 +31,14 @@ class OtherSpendPage : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("OtherExpenseData", Context.MODE_PRIVATE)
         val tasks = sharedPreferences.getStringSet("tasks", mutableSetOf())?.toMutableList() ?: mutableListOf()
 
+        val totalOtherAmount = findViewById<TextView>(R.id.other_total_price);
+        val totalExpense = tasks.sumOf { task ->
+            val parts = task.split(" - ")
+            parts.getOrNull(1)?.toDoubleOrNull() ?: 0.0
+        }
+        val totalExpenseFloat = totalExpense.toFloat()
+        totalOtherAmount.text = totalExpenseFloat.toString();
+
 //      Pass the list to the adapter
         val adapter = OtherExpenseAdapter(this, tasks) { position ->
             tasks.removeAt(position)
@@ -45,11 +54,10 @@ class OtherSpendPage : AppCompatActivity() {
             startActivity(intent);
         }
 
-        // back to list page
-        val backButton = findViewById<ImageView>(R.id.btn_back_home);
-        backButton.setOnClickListener{
-            val intent = Intent(this, ListView::class.java);
-            startActivity(intent);
+        val viewTransaction = findViewById<TextView>(R.id.view_transition);
+        viewTransaction.setOnClickListener{
+            val intent = Intent(this,TransactionPage::class.java);
+            startActivity(intent)
         }
     }
 }
